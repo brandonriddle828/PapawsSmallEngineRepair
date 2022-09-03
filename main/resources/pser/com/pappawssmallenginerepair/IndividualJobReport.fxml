@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="755.0" prefWidth="1319.0" style="-fx-background-color: Grey; -fx-border-color: Black; -fx-border-width: 10px;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pser.com.pappawssmallenginerepair.EarningsReport">
+
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="44.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Images/1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="368.0" layoutY="31.0" prefHeight="150.0" prefWidth="761.0" stylesheets="@../../../css/style.css" text="Papaw's Small Engine Repair" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="Impact" size="64.0" />
+         </font>
+      </Label>
+      <VBox focusTraversable="true" layoutX="25.0" layoutY="274.0" prefHeight="299.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToJobs" prefHeight="65.0" prefWidth="500.0" styleClass="redbutton" stylesheets="@../../../css/style.css" text="Jobs" textAlignment="CENTER">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#switchToClient" prefHeight="65.0" prefWidth="500.0" styleClass="redbutton" stylesheets="@../../../css/style.css" text="Client" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#switchToEarnings" prefHeight="65.0" prefWidth="500.0" styleClass="redbutton" stylesheets="@../../../css/style.css" text="Earnings" textAlignment="CENTER">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#logout" prefHeight="65.0" prefWidth="500.0" styleClass="redbutton" stylesheets="@../../../css/style.css" text="Logout" textAlignment="CENTER">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="302.0" layoutY="337.0" prefHeight="380.0" prefWidth="906.0">
+         <children>
+            <Label layoutX="19.0" layoutY="290.0" stylesheets="@../../../css/style.css" text="Total Profit Made">
+               <font>
+                  <Font name="Impact" size="64.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalProfit" layoutX="548.0" layoutY="290.0" text="\$" textFill="WHITE">
+               <font>
+                  <Font name="Impact" size="64.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="14.0" layoutY="24.0" prefHeight="221.0" prefWidth="439.0" style="-fx-border-color: black;">
+               <children>
+                  <VBox layoutX="17.0" layoutY="94.0" prefHeight="107.0" prefWidth="268.0">
+                     <children>
+                        <Label stylesheets="@../../../css/style.css" text="Total Parts Cost">
+                           <font>
+                              <Font name="Impact" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="29.0" prefWidth="271.0" stylesheets="@../../../css/style.css" text="Total Pickup/Delivery Cost">
+                           <font>
+                              <Font name="Impact" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label stylesheets="@../../../css/style.css" text="Total Parts Ordered">
+                           <font>
+                              <Font name="Impact" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="300.0" layoutY="94.0" prefHeight="130.0" prefWidth="120.0">
+                     <children>
+                        <Label fx:id="totalPartsCost" text="\$" textFill="#ffef08">
+                           <font>
+                              <Font name="Impact" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="pickupDelCost" text="\$" textFill="#ffef08">
+                           <font>
+                              <Font name="Impact" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="partsOrdered" text="0" textFill="#ffef08">
+                           <font>
+                              <Font name="Impact" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Label layoutX="175.0" layoutY="14.0" stylesheets="@../../../css/style.css" text="Cost" underline="true">
+                     <font>
+                        <Font name="Impact" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="461.0" layoutY="24.0" prefHeight="226.0" prefWidth="427.0" style="-fx-border-color: black;">
+               <children>
+                  <VBox layoutX="14.0" layoutY="92.0" prefHeight="130.0" prefWidth="260.0">
+                     <children>
+                        <Label stylesheets="@../../../css/style.css" text="Profit On Parts">
+                           <font>
+                              <Font name="Impact" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label stylesheets="@../../../css/style.css" text="Profit On Pickup/Delivery">
+                           <font>
+                              <Font name="Impact" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label stylesheets="@../../../css/style.css" text="Profit On Labor">
+                           <font>
+                              <Font name="Impact" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="274.0" layoutY="92.0" prefHeight="130.0" prefWidth="120.0">
+                     <children>
+                        <Label fx:id="partProfit" text="\$" textFill="#00ff11">
+                           <font>
+                              <Font name="Impact" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="pickupProfit" text="\$" textFill="#00ff11">
+                           <font>
+                              <Font name="Impact" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="laborProfit" text="\$" textFill="#00ff11">
+                           <font>
+                              <Font name="Impact" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Label layoutX="160.0" layoutY="14.0" stylesheets="@../../../css/style.css" text="Profit" underline="true">
+                     <font>
+                        <Font name="Impact" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Button layoutX="661.0" layoutY="274.0" mnemonicParsing="false" onAction="#loadJobReport" prefHeight="45.0" prefWidth="175.0" styleClass="greenbutton" stylesheets="@../../../css/style.css" text="Load Report" textAlignment="CENTER">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Button>
+      <TextField fx:id="jobID" layoutX="755.0" layoutY="190.0" prefHeight="17.0" prefWidth="108.0" promptText="28">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </TextField>
+      <Label layoutX="591.0" layoutY="182.0" stylesheets="@../../../css/style.css" text="Job ID">
+         <font>
+            <Font name="Impact" size="48.0" />
+         </font>
+      </Label>
+
+   </children>
+</AnchorPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="1304.0" style="-fx-background-color: Grey; -fx-border-color: Black; -fx-border-width: 10px;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pser.com.pappawssmallenginerepair.ViewClientController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="44.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Images/1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="378.0" layoutY="14.0" prefHeight="150.0" prefWidth="761.0" stylesheets="@../../../css/style.css" text="Papaw's Small Engine Repair" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="Impact" size="64.0" />
+         </font>
+      </Label>
+      <VBox focusTraversable="true" layoutX="25.0" layoutY="274.0" prefHeight="299.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToJobs" prefHeight="65.0" prefWidth="500.0" styleClass="redbutton" stylesheets="@../../../css/style.css" text="Jobs" textAlignment="CENTER">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#switchToClient" prefHeight="65.0" prefWidth="500.0" styleClass="redbutton" stylesheets="@../../../css/style.css" text="Client" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#switchToEarnings" prefHeight="65.0" prefWidth="500.0" styleClass="redbutton" stylesheets="@../../../css/style.css" text="Earnings" textAlignment="CENTER">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#logout" prefHeight="65.0" prefWidth="500.0" styleClass="redbutton" stylesheets="@../../../css/style.css" text="Logout" textAlignment="CENTER">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <TableView fx:id="clientTable" editable="true" layoutX="240.0" layoutY="176.0" prefHeight="467.0" prefWidth="1037.0">
+        <columns>
+          <TableColumn id="idCol" fx:id="idCol" prefWidth="52.88890075683594" text="Client ID" />
+          <TableColumn id="fnameCol" fx:id="fnameCol" prefWidth="150.6666259765625" text="First Name" />
+            <TableColumn id="lnameCol" fx:id="lnameCol" prefWidth="171.55557250976562" text="Last Name" />
+            <TableColumn id="phoneCol" fx:id="phoneCol" prefWidth="168.88885498046875" text="Phone" />
+            <TableColumn id="emailCol" fx:id="emailCol" prefWidth="196.0" text="Email" />
+            <TableColumn id="addressCol" fx:id="addressCol" prefWidth="300.88885498046875" text="Address" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

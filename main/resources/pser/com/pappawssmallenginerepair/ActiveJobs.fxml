@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="752.0" prefWidth="1304.0" style="-fx-background-color: Grey; -fx-border-color: Black; -fx-border-width: 10px;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pser.com.pappawssmallenginerepair.ViewActiveJobsController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="44.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Images/1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="378.0" layoutY="14.0" prefHeight="150.0" prefWidth="761.0" stylesheets="@../../../css/style.css" text="Papaw's Small Engine Repair" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="Impact" size="64.0" />
+         </font>
+      </Label>
+      <VBox focusTraversable="true" layoutX="25.0" layoutY="274.0" prefHeight="299.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToJobs" prefHeight="65.0" prefWidth="500.0" styleClass="redbutton" stylesheets="@../../../css/style.css" text="Jobs" textAlignment="CENTER">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#switchToClient" prefHeight="65.0" prefWidth="500.0" styleClass="redbutton" stylesheets="@../../../css/style.css" text="Client" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#switchToEarnings" prefHeight="65.0" prefWidth="500.0" styleClass="redbutton" stylesheets="@../../../css/style.css" text="Earnings" textAlignment="CENTER">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#logout" prefHeight="65.0" prefWidth="500.0" styleClass="redbutton" stylesheets="@../../../css/style.css" text="Logout" textAlignment="CENTER">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <TableView fx:id="activeJobTable" editable="true" fixedCellSize="0.0" layoutX="240.0" layoutY="176.0" prefHeight="371.0" prefWidth="1037.0">
+        <columns>
+          <TableColumn fx:id="jobCol" prefWidth="52.88890075683594" text="Job ID" />
+          <TableColumn fx:id="makeCol" prefWidth="115.111083984375" text="Make" />
+            <TableColumn fx:id="modelCol" prefWidth="133.77777099609375" text="Model" />
+            <TableColumn fx:id="yearCol" prefWidth="70.2222900390625" text="Year" />
+            <TableColumn fx:id="typeCol" prefWidth="101.77783203125" text="Type" />
+            <TableColumn fx:id="startCol" prefWidth="153.333251953125" text="Start Date" />
+            <TableColumn fx:id="issueCol" minWidth="0.0" prefWidth="338.222412109375" text="Issue" />
+            <TableColumn fx:id="clientCol" prefWidth="70.2222900390625" text="Client ID" />
+        </columns>
+      </TableView>
+      <Button layoutX="278.0" layoutY="573.0" mnemonicParsing="false" onAction="#switchToAddParts" prefHeight="65.0" prefWidth="500.0" styleClass="whitebutton" stylesheets="@../../../css/style.css" text="Add Purchased Part" textAlignment="CENTER">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="278.0" layoutY="650.0" mnemonicParsing="false" onAction="#switchToViewParts" prefHeight="65.0" prefWidth="500.0" styleClass="whitebutton" stylesheets="@../../../css/style.css" text="View Purchased Parts" textAlignment="CENTER">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="798.0" layoutY="561.0" prefHeight="169.0" prefWidth="478.0" style="-fx-border-width: 5; -fx-border-color: black;">
+         <children>
+            <Button layoutX="113.0" layoutY="47.0" mnemonicParsing="false" onAction="#switchToCompleteJob" prefHeight="75.0" prefWidth="252.0" styleClass="greenbutton" stylesheets="@../../../css/style.css" text="Complete Job" textAlignment="CENTER">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
