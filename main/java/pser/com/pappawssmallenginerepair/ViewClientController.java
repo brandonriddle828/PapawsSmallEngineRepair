@@ -31,7 +31,7 @@ public class ViewClientController implements Initializable
     private Parent root;
     String url = ("jdbc:mysql://localhost:3306/pser");
     String username = ("root");
-    String password = ("Roxysdad828!");
+    String password = ("");
 
     @FXML
     protected TableView <Client> clientTable;
