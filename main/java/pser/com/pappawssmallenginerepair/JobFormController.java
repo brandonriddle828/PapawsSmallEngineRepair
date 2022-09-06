@@ -24,7 +24,7 @@ public class JobFormController extends Job implements Initializable
 
     String url = ("jdbc:mysql://localhost:3306/pser");
     String username = ("root");
-    String password = ("Roxysdad828!");
+    String password = ("");
 
     protected boolean checker;
 
