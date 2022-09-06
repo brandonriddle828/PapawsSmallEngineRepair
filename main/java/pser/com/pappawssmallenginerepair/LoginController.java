@@ -39,8 +39,8 @@ public class LoginController implements Initializable
     public void loginPageSuccess(ActionEvent event)
     {
         users = new ArrayList<>();
-        Users gina = new Users("Gina", "6776","ginariddle1967");
-        Users brandon = new Users("Brandon","Roxysdad828!","brandonriddle828");
+        Users gina = new Users("Gina", "","");
+        Users brandon = new Users("Brandon","","");
         Users trial = new Users("trial","1","1");
 
         Users loginUser = null;
