@@ -30,7 +30,7 @@ public class UnpaidJobsController implements Initializable
 
     String url = ("jdbc:mysql://localhost:3306/pser");
     String username = ("root");
-    String password = ("Roxysdad828!");
+    String password = ("");
 
     @FXML
     protected TableView<FinishedJobs> finishedJobTable;
