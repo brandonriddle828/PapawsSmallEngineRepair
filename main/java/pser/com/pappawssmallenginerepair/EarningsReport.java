@@ -46,7 +46,7 @@ public class EarningsReport
 
     String url = ("jdbc:mysql://localhost:3306/pser");
     String username = ("root");
-    String password = ("Roxysdad828!");
+    String password = ("");
 
 
     public void switchToClient(ActionEvent event)
